@@ -13,4 +13,5 @@ spaModule.controller('SpaController', function($scope, $http){
 		})
 		.catch(console.error.bind(console));
 	};
+
 });
