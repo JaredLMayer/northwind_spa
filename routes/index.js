@@ -6,11 +6,11 @@ var Appointment = require('../models');
 router.get('/appointments', function(req, res, next){
 	
 	console.log("reached appointments")
-	// Appointment.find({})
-	// .then(function(appointments){
-	// 	res.send(appointments);
-	// })
-	// .catch(next);
+	Appointment.find({})
+	.then(function(appointments){
+		res.send(appointments);
+	})
+	.catch(next);
 });
 
 router.post('/appointment', function(req, res, next){
