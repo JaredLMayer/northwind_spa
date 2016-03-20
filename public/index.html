@@ -10,9 +10,9 @@
     <div id="main" class="container-fluid" ng-app="spa">
       <div class="col-xs-10" ng-controller="SpaController">
         <h2>NorthWind SPA</h2>
-        <div ng-show="displayError" class="alert alert-danger">
+       <!--  <div ng-show="displayError" class="alert alert-danger">
           {{errorMessage}}
-        </div>
+        </div> -->
         <form class="form-inline" role="form">
             <div class="row">
               <div class="col-sm-12">
@@ -47,9 +47,9 @@
                           {{appointment.priorityFloor}}
                       </td>
                       <td style="text-align: right">
-                          <button ng-click="moveUp(key)" ng-show="!$first">up priority</button>
-                          <button ng-click="moveDown(key)" ng-show="!$last">down priority</button>
-                          <button ng-click="delete(key)">X</button>
+                          <button class="btn btn-default" ng-click="upPriority(key)" ng-show="!$first">up priority</button>
+                          <button class="btn btn-default" ng-click="downPriotity(key)" ng-show="!$last">down priority</button>
+                          <button class="btn btn-danger" ng-click="deleteItem(key)">Delete</button>
                       </td>
                   </tr>
               </tbody>
